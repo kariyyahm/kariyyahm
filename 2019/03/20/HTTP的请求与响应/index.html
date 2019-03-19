@@ -6,15 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Kari&#39;s Notes</title>
+  <title>HTTP的请求与响应 | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kari&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="HTTP的请求与响应">
+<meta property="og:url" content="http://yoursite.com/2019/03/20/HTTP的请求与响应/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-19T16:57:39.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kari&#39;s Notes">
+<meta name="twitter:title" content="HTTP的请求与响应">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -144,16 +145,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-HTTP的请求与响应" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-HTTP的请求与响应" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/20/HTTP的请求与响应/">HTTP的请求与响应</a>
+    <h1 class="article-title" itemprop="name">
+      HTTP的请求与响应
     </h1>
   
 
@@ -177,16 +176,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/20/HTTP的请求与响应/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/19/命令行中常见命令用法及explainshell-com的用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">命令行中常见命令用法及explainshell.com的用法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -201,197 +208,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-命令行中常见命令用法及explainshell-com的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/19/命令行中常见命令用法及explainshell-com的用法/">命令行中常见命令用法及explainshell.com的用法</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/19/命令行中常见命令用法及explainshell-com的用法/" class="archive-article-date">
-  	<time datetime="2019-03-19T13:26:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="常见命令用法"><a href="#常见命令用法" class="headerlink" title="常见命令用法"></a>常见命令用法</h2><h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>ls 为 列出有关文件的信息，有以下常见用法：<br><br>ls [OPTION]… [FILE]…</p>
-<ul>
-<li>-a, –all                <code>不要忽略以.开头的目录</code></li>
-<li>-l                       <code>用列表来表示</code></li>
-</ul>
-<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>cat 为 将文件内容连接到标准输出，有以下常见用法：<br><br>cat [OPTION]… [FILE]…<br>如果没有FILE，或者FILE是 - ，则读取标准输入。</p>
-<ul>
-<li>-A, –show-all           <code>全部显示</code></li>
-<li>-b, –number-nonblank    <code>标记非空行</code></li>
-<li>-n, –number             <code>标记所有行</code></li>
-<li>-E, –show-ends          <code>在每行行末显示$</code></li>
-<li>-s, –squeeze-blank      <code>抑制重复的空输出行</code></li>
-</ul>
-<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>mv 为 将文件重命名或者移动至某目录，有以下常见用法：<br><br>mv [OPTION]… [OLDNAME]…[NEWNAME]<br><br>mv [OPTION]… [SOURCE]… [DIRECTORY]<br></p>
-<ul>
-<li>-f, –force            <code>在覆盖之前不提示</code></li>
-</ul>
-<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>touch 为 将每个文件的访问和修改时间更新为当前时间或者创建一个文件，有以下常见用法：<br><br>touch [OPTION]… FILE…</p>
-<ul>
-<li>-a                       <code>仅更改访问时间</code></li>
-<li>-m                       <code>仅更改修改时间</code></li>
-</ul>
-<h2 id="explainshell-com-的使用方法"><a href="#explainshell-com-的使用方法" class="headerlink" title="explainshell.com 的使用方法"></a>explainshell.com 的使用方法</h2><p>explainhell是一个工具（带有Web界面），能够解析手册页，提取选项并通过将每个参数与手册页中的相关帮助文本相匹配来解释给定的命令行。<br></p>
-<p>explainhell由以下组件构建：</p>
-<ul>
-<li>将给定手册页从原始格式转换为html（manpage.py）的手册页阅读器<br></li>
-<li>分类器遍历手册页中的每个段落并将其分类为包含选项（algo / classifier.py）<br></li>
-<li>一个选项提取器，用于扫描已分类的段落并查找选项（options.py）<br></li>
-<li>存储后端，将已处理的手册页保存到mongodb（store.py）<br></li>
-<li>遍历命令的AST（由bashlex解析）并在上下文中将每个节点与相关帮助文本（matcher.py）匹配的匹配器<br></li>
-</ul>
-<p>在查询解释时，它：<br></p>
-<ul>
-<li>将查询解析为AST</li>
-<li>访问AST中的有趣节点，例如：<br><ul>
-<li>命令节点 - 这些节点代表一个简单的命令<br></li>
-<li>shell相关节点 - 这些节点代表shell解释的内容，例如’|’，’&amp;&amp;’</li>
-</ul>
-</li>
-<li>对于每个命令节点，我们检查是否知道如何解释当前程序，然后检查其余的令牌，尝试将每个令牌与已知选项列表进行匹配</li>
-<li>返回使用Flask呈现的匹配列表<br><img src="https://user-gold-cdn.xitu.io/2019/3/16/1698613601fe8495?w=1939&amp;h=613&amp;f=png&amp;s=423742" alt></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/19/命令行中常见命令用法及explainshell-com的用法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-开博大吉" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/19/开博大吉/">开博大吉</a>
-    </h1>
   
 
-        
-        <a href="/2019/03/19/开博大吉/" class="archive-article-date">
-  	<time datetime="2019-03-19T12:52:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><center>Seven times have I despised my soul <br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;by Kahlil Gibran <br><br><br><br>The first time when I saw her being meek that she might attain height. <br></center></p>
-<p>The second time when I saw her limping before the crippled. <br></p>
-<p>The third time when she was given to choose between the hard and the easy, and she chose the easy. <br></p>
-<p>The fourth time when she committed a wrong, and comforted herself that others also commit wrong. <br></p>
-<p>The fifth time when she forbore for weakness, and attributed her patience to strength. <br></p>
-<p>The sixth time when she despised the ugliness of a face, and knew not that it was one of her own masks. <br></p>
-<p>And the seventh time when she sang a song of praise, and deemed it a virtue. </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">纪念日</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/19/开博大吉/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -414,8 +256,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
