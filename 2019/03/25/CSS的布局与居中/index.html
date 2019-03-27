@@ -6,20 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>HTML的常用标签 | Kari&#39;s Notes</title>
+  <title>CSS的布局与居中 | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTML 标签什么是 HTML 标签  HTML 文档和 HTML 元素是通过 HTML 标签进行标记的 HTML 标签由开始标签和结束标签组成 开始标签是被括号包围的元素名 结束标签是被括号包围的斜杠和元素名 某些 HTML 元素没有结束标签，比如 &amp;lt;br&amp;gt;  注释：开始标签的英文翻译是 start tag 或 opening tag，结束标签的英文翻译是 end tag 或 clo">
-<meta name="keywords" content="html">
+  <meta name="description" content="左右布局可以使用双浮动完成左右布局效果：  子元素添加 float 父元素添加上 clearfix 类，清除浮动效果后父元素的塌陷    html 代码如下：1234&amp;lt;div class=&amp;quot;parent clearfix&amp;quot;&amp;gt;  &amp;lt;div class=&amp;quot;leftChild&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;div class=&amp;qu">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML的常用标签">
-<meta property="og:url" content="http://yoursite.com/2019/03/21/HTML的常用标签/index.html">
+<meta property="og:title" content="CSS的布局与居中">
+<meta property="og:url" content="http://yoursite.com/2019/03/25/CSS的布局与居中/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
-<meta property="og:description" content="HTML 标签什么是 HTML 标签  HTML 文档和 HTML 元素是通过 HTML 标签进行标记的 HTML 标签由开始标签和结束标签组成 开始标签是被括号包围的元素名 结束标签是被括号包围的斜杠和元素名 某些 HTML 元素没有结束标签，比如 &amp;lt;br&amp;gt;  注释：开始标签的英文翻译是 start tag 或 opening tag，结束标签的英文翻译是 end tag 或 clo">
+<meta property="og:description" content="左右布局可以使用双浮动完成左右布局效果：  子元素添加 float 父元素添加上 clearfix 类，清除浮动效果后父元素的塌陷    html 代码如下：1234&amp;lt;div class=&amp;quot;parent clearfix&amp;quot;&amp;gt;  &amp;lt;div class=&amp;quot;leftChild&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;div class=&amp;qu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-21T07:40:09.322Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/3/17/1698aa2e1787110d?w=2462&h=755&f=png&s=244431">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/3/17/1698ab411d3cbe7b?w=2461&h=978&f=png&s=308713">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/3/17/1698ad5c8fe35a16?w=2462&h=782&f=png&s=220583">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/3/17/1698af84f26e8e38?w=2462&h=815&f=png&s=236330">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/3/17/1698b2832528afe1?w=2462&h=835&f=png&s=236941">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/3/17/1698b3394154a7d1?w=2462&h=828&f=png&s=243897">
+<meta property="og:updated_time" content="2019-03-27T16:11:54.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML的常用标签">
-<meta name="twitter:description" content="HTML 标签什么是 HTML 标签  HTML 文档和 HTML 元素是通过 HTML 标签进行标记的 HTML 标签由开始标签和结束标签组成 开始标签是被括号包围的元素名 结束标签是被括号包围的斜杠和元素名 某些 HTML 元素没有结束标签，比如 &amp;lt;br&amp;gt;  注释：开始标签的英文翻译是 start tag 或 opening tag，结束标签的英文翻译是 end tag 或 clo">
+<meta name="twitter:title" content="CSS的布局与居中">
+<meta name="twitter:description" content="左右布局可以使用双浮动完成左右布局效果：  子元素添加 float 父元素添加上 clearfix 类，清除浮动效果后父元素的塌陷    html 代码如下：1234&amp;lt;div class=&amp;quot;parent clearfix&amp;quot;&amp;gt;  &amp;lt;div class=&amp;quot;leftChild&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  &amp;lt;div class=&amp;qu">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/3/17/1698aa2e1787110d?w=2462&h=755&f=png&s=244431">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -149,53 +156,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HTML的常用标签" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSS的布局与居中" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HTML的常用标签
+      CSS的布局与居中
     </h1>
   
 
         
-        <a href="/2019/03/21/HTML的常用标签/" class="archive-article-date">
-  	<time datetime="2019-03-21T07:36:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-21</time>
+        <a href="/2019/03/25/CSS的布局与居中/" class="archive-article-date">
+  	<time datetime="2019-03-25T15:12:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h2><p>什么是 HTML 标签</p>
-<ul>
-<li>HTML 文档和 HTML 元素是通过 HTML 标签进行标记的</li>
-<li>HTML 标签由开始标签和结束标签组成</li>
-<li>开始标签是被括号包围的元素名</li>
-<li>结束标签是被括号包围的斜杠和元素名</li>
-<li>某些 HTML 元素没有结束标签，比如 <code>&lt;br&gt;</code></li>
-</ul>
-<p>注释：开始标签的英文翻译是 start tag 或 opening tag，结束标签的英文翻译是 end tag 或 closing tag。<br>HTML 元素实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  &lt;p&gt;     Hello world     &lt;/p&gt;</span><br><span class="line">开始标签      内容        结束标签</span><br></pre></td></tr></table></figure></p>
+        <h2 id="左右布局"><a href="#左右布局" class="headerlink" title="左右布局"></a>左右布局</h2><p>可以使用双浮动完成左右布局效果：</p>
+<ol>
+<li>子元素添加 float</li>
+<li>父元素添加上 clearfix 类，清除浮动效果后父元素的塌陷  </li>
+</ol>
+<p>html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent clearfix&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;leftChild&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;rightChild&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<p>HTML 文档实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;title&gt;HTML&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;p&gt;Hello world!&lt;/p&gt;&lt;br&gt;</span><br><span class="line">  &lt;p&gt;I am kari!&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="基本的-HTML-标签"><a href="#基本的-HTML-标签" class="headerlink" title="基本的 HTML 标签"></a>基本的 HTML 标签</h2><h3 id="HTML-标题"><a href="#HTML-标题" class="headerlink" title="HTML 标题"></a>HTML 标题</h3><p>HTML 标题（Heading）是通过 <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> 等标签进行定义的。<br>HTML 标题实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;This is a heading&lt;/h1&gt;</span><br><span class="line">&lt;h2&gt;This is a heading&lt;/h2&gt;</span><br><span class="line">&lt;h3&gt;This is a heading&lt;/h3&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="HTML-段落"><a href="#HTML-段落" class="headerlink" title="HTML 段落"></a>HTML 段落</h3><p>HTML 段落是通过 <code>&lt;p&gt;</code> 标签进行定义的。<br>HTML 段落实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is a paragraph.&lt;/p&gt;</span><br><span class="line">&lt;p&gt;This is another paragraph.&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="HTML-链接"><a href="#HTML-链接" class="headerlink" title="HTML 链接"></a>HTML 链接</h3><p>HTML 链接是通过 <code>&lt;a&gt;</code> 标签进行定义的。<br>HTML 链接实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.baidu.com&quot;&gt;This is a link&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="HTML-图像"><a href="#HTML-图像" class="headerlink" title="HTML 图像"></a>HTML 图像</h3><p>HTML 图像是通过 <code>&lt;img&gt;</code> 标签进行定义的。<br>HTML 图像实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;kari.jpg&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="常用的-HTML-标签"><a href="#常用的-HTML-标签" class="headerlink" title="常用的 HTML 标签"></a>常用的 HTML 标签</h2><h3 id="HTML-嵌套页面"><a href="#HTML-嵌套页面" class="headerlink" title="HTML 嵌套页面"></a>HTML 嵌套页面</h3><p>HTML 嵌套页面是通过 <code>&lt;iframe&gt;</code> 标签进行实现的。<br>HTML 嵌套页面实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;https://www.baidu.com&quot; name=&quot;xxx&quot;&gt;&lt;/iframe&gt;`</span><br></pre></td></tr></table></figure></p>
-<h3 id="HTML-跳转页面"><a href="#HTML-跳转页面" class="headerlink" title="HTML 跳转页面"></a>HTML 跳转页面</h3><ul>
-<li>（HTTP GET 请求）<br>HTML 跳转页面是通过 <code>&lt;a&gt;</code> 标签进行实现的。<br>HTML 跳转页面（HTTP GET 请求）实例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a src=&quot;https://www.baidu.com&quot; name=&quot;xxx&quot;&gt;&lt;/a&gt;`</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>属性见 MDN：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a</a></p>
+<p>css 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">clearfix::after&#123;</span><br><span class="line">  content: &apos;&apos;;</span><br><span class="line">  display: block;</span><br><span class="line">  clear: both;</span><br><span class="line">&#125;</span><br><span class="line">.parent&#123;</span><br><span class="line">  padding: 30px;</span><br><span class="line">  background: black;</span><br><span class="line">  height: 100px;</span><br><span class="line">&#125;</span><br><span class="line">.leftChild&#123;</span><br><span class="line">  float: left;</span><br><span class="line">  width: 50%;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: red;</span><br><span class="line">&#125;</span><br><span class="line">.rightChild&#123;</span><br><span class="line">  float: right;</span><br><span class="line">  width: 50%;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="https://user-gold-cdn.xitu.io/2019/3/17/1698aa2e1787110d?w=2462&amp;h=755&amp;f=png&amp;s=244431" alt></p>
+<h2 id="左中右布局"><a href="#左中右布局" class="headerlink" title="左中右布局"></a>左中右布局</h2><p>— 使用双浮动完成左中右布局效果与之前用法相同，只是多一条<code>&lt;div&gt;</code>，不再演示 —<br>同时也可使用绝对定位完成左中右布局：</p>
+<ol>
+<li>父元素添加<code>position: relative;</code></li>
+<li>子元素添加<code>position: absolute;</code></li>
+<li>子元素使用<code>top: $px;</code> <code>botton: $px;</code> <code>left: $px;</code> <code>right: $px;</code>进行定位<br></li>
+</ol>
+<p>html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;leftChild&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;middleChild&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;rightChild&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>css 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  padding: 30px;</span><br><span class="line">  background: black;</span><br><span class="line">  height: 100px;</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.leftChild&#123;</span><br><span class="line">  width: 30%;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: red;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 0;</span><br><span class="line">&#125;</span><br><span class="line">.rightChild&#123;</span><br><span class="line">  width: 30%;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: green;</span><br><span class="line">  position: absolute;</span><br><span class="line">  right: 0;</span><br><span class="line">&#125;</span><br><span class="line">.middleChild&#123;</span><br><span class="line">  width: 30%;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: yellow;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 35%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="https://user-gold-cdn.xitu.io/2019/3/17/1698ab411d3cbe7b?w=2461&amp;h=978&amp;f=png&amp;s=308713" alt></p>
+<h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><h3 id="html-元素"><a href="#html-元素" class="headerlink" title="html 元素"></a>html 元素</h3><h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><p>添加 <code>margin: 0 auto;</code> 使其元素水平居中<br></p>
+<p>html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>css 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  padding: 30px;</span><br><span class="line">  background: black;</span><br><span class="line">  height: 100px;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  height: 100%;</span><br><span class="line">  background: red;</span><br><span class="line">  width: 20%;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="https://user-gold-cdn.xitu.io/2019/3/17/1698ad5c8fe35a16?w=2462&amp;h=782&amp;f=png&amp;s=220583" alt></p>
+<h4 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h4><p>添加 <code>display: block;</code> 转化成块级元素，然后按照块级元素水平居中。</p>
+<h3 id="元素内容"><a href="#元素内容" class="headerlink" title="元素内容"></a>元素内容</h3><h4 id="块级元素内容"><a href="#块级元素内容" class="headerlink" title="块级元素内容"></a>块级元素内容</h4><p>添加 <code>text-align: center;</code> 使其内容水平居中<br></p>
+<p>html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;I&apos;m child~&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>css 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  padding: 30px;</span><br><span class="line">  background: black;</span><br><span class="line">  height: 100px;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  height: 100%;</span><br><span class="line">  background: red;</span><br><span class="line">  width: 60%;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="https://user-gold-cdn.xitu.io/2019/3/17/1698af84f26e8e38?w=2462&amp;h=815&amp;f=png&amp;s=236330" alt></p>
+<h4 id="内联元素内容"><a href="#内联元素内容" class="headerlink" title="内联元素内容"></a>内联元素内容</h4><p>添加 <code>display: block;</code> 转化成块级元素，然后按照块级元素内容水平居中。</p>
+<h2 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h2><h3 id="html-元素-1"><a href="#html-元素-1" class="headerlink" title="html 元素"></a>html 元素</h3><h4 id="块级元素-1"><a href="#块级元素-1" class="headerlink" title="块级元素"></a>块级元素</h4><p>添加 <code>position: absolute;</code> 使其元素绝对定位，再利用 <code>top: $px;</code> 定位<br></p>
+<p>html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;I&apos;m child~&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>css 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  padding: 30px;</span><br><span class="line">  background: black;</span><br><span class="line">  height: 300px;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  height: 50px;</span><br><span class="line">  background: red;</span><br><span class="line">  width: 60%;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 155px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="https://user-gold-cdn.xitu.io/2019/3/17/1698b2832528afe1?w=2462&amp;h=835&amp;f=png&amp;s=236941" alt></p>
+<h4 id="内联元素-1"><a href="#内联元素-1" class="headerlink" title="内联元素"></a>内联元素</h4><p>添加 <code>display: block;</code> 转化成块级元素，然后按照块级元素垂直居中。</p>
+<h3 id="元素内容-1"><a href="#元素内容-1" class="headerlink" title="元素内容"></a>元素内容</h3><h4 id="块级元素内容-1"><a href="#块级元素内容-1" class="headerlink" title="块级元素内容"></a>块级元素内容</h4><p>添加 <code>line-height: height($)px;</code> 使其 <strong>元素内容行高 = 块级元素高度</strong>。<br><br>html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;I&apos;m child~&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>css 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  padding: 30px;</span><br><span class="line">  background: black;</span><br><span class="line">  height: 300px;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  height: 50px;</span><br><span class="line">  background: red;</span><br><span class="line">  width: 60%;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 155px;</span><br><span class="line">  line-height: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/3/17/1698b3394154a7d1?w=2462&amp;h=828&amp;f=png&amp;s=243897" alt></p>
+<h4 id="内联元素内容-1"><a href="#内联元素内容-1" class="headerlink" title="内联元素内容"></a>内联元素内容</h4><p>添加 <code>display: block;</code> 转化成块级元素，然后按照块级元素内容垂直居中。</p>
+<h2 id="其他小技巧"><a href="#其他小技巧" class="headerlink" title="其他小技巧"></a>其他小技巧</h2><p>块级元素添加 <code>display： inline-block;</code> 后，会发生什么？</p>
 <ul>
-<li>（HTTP POST 请求）<br>HTML 跳转页面是通过 <code>&lt;form&gt;</code> 标签进行实现的。<br>HTML 跳转页面（HTTP POST 请求）实例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form src=&quot;https://www.baidu.com&quot; name=&quot;xxx&quot;&gt;&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<li><p>块级元素宽度收缩<br><br>块级元素不写宽度的情况下，默认宽100%（占据一行）。<br><br>加入inline-block，宽度自动适合内容。</p>
+</li>
+<li><p>块级元素下方会产生空隙<br><br>解决方法：添加<code>vertical-align: top;</code>，清除空隙效果。</p>
 </li>
 </ul>
-<p>属性见 MDN：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form</a></p>
-<h3 id="HTML-展示数据"><a href="#HTML-展示数据" class="headerlink" title="HTML 展示数据"></a>HTML 展示数据</h3><p>HTML 展示数据是通过 <code>&lt;table&gt;</code> 标签进行实现的（HTTP POST 请求）<br>HTML 展示数据实例：<br>属性见：<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;Kari&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;Jack&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;Jane&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;Bob&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -209,7 +234,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -228,18 +253,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/22/去年的我/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          去年的我
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/19/HTTP的请求与响应/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HTTP的请求与响应</div>
+    <a href="/2019/03/22/去年的我/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">去年的我</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -266,7 +282,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-标签"><span class="toc-number">1.</span> <span class="toc-text">HTML 标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本的-HTML-标签"><span class="toc-number">2.</span> <span class="toc-text">基本的 HTML 标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-标题"><span class="toc-number">2.1.</span> <span class="toc-text">HTML 标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-段落"><span class="toc-number">2.2.</span> <span class="toc-text">HTML 段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-链接"><span class="toc-number">2.3.</span> <span class="toc-text">HTML 链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-图像"><span class="toc-number">2.4.</span> <span class="toc-text">HTML 图像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用的-HTML-标签"><span class="toc-number">3.</span> <span class="toc-text">常用的 HTML 标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-嵌套页面"><span class="toc-number">3.1.</span> <span class="toc-text">HTML 嵌套页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-跳转页面"><span class="toc-number">3.2.</span> <span class="toc-text">HTML 跳转页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-展示数据"><span class="toc-number">3.3.</span> <span class="toc-text">HTML 展示数据</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#左右布局"><span class="toc-number">1.</span> <span class="toc-text">左右布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#左中右布局"><span class="toc-number">2.</span> <span class="toc-text">左中右布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#水平居中"><span class="toc-number">3.</span> <span class="toc-text">水平居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html-元素"><span class="toc-number">3.1.</span> <span class="toc-text">html 元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#块级元素"><span class="toc-number">3.1.1.</span> <span class="toc-text">块级元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内联元素"><span class="toc-number">3.1.2.</span> <span class="toc-text">内联元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素内容"><span class="toc-number">3.2.</span> <span class="toc-text">元素内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#块级元素内容"><span class="toc-number">3.2.1.</span> <span class="toc-text">块级元素内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内联元素内容"><span class="toc-number">3.2.2.</span> <span class="toc-text">内联元素内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#垂直居中"><span class="toc-number">4.</span> <span class="toc-text">垂直居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html-元素-1"><span class="toc-number">4.1.</span> <span class="toc-text">html 元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#块级元素-1"><span class="toc-number">4.1.1.</span> <span class="toc-text">块级元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内联元素-1"><span class="toc-number">4.1.2.</span> <span class="toc-text">内联元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素内容-1"><span class="toc-number">4.2.</span> <span class="toc-text">元素内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#块级元素内容-1"><span class="toc-number">4.2.1.</span> <span class="toc-text">块级元素内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内联元素内容-1"><span class="toc-number">4.2.2.</span> <span class="toc-text">内联元素内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他小技巧"><span class="toc-number">5.</span> <span class="toc-text">其他小技巧</span></a></li></ol>
                     </div>
                 </span>
             </div>
