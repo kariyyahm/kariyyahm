@@ -8,15 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JS的数据类型 | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="js">
+  <meta name="description" content="JavaSript 是一种动态语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据：123var a = 100    // a is Number nowa = &amp;apos;hello&amp;apos;    // a is String nowa = true       // a is Boolean now 数值（Numbe">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS的数据类型">
 <meta property="og:url" content="http://yoursite.com/2019/03/30/JS的数据类型/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
+<meta property="og:description" content="JavaSript 是一种动态语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据：123var a = 100    // a is Number nowa = &amp;apos;hello&amp;apos;    // a is String nowa = true       // a is Boolean now 数值（Numbe">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-31T15:10:14.675Z">
+<meta property="og:updated_time" content="2019-04-03T09:29:08.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS的数据类型">
+<meta name="twitter:description" content="JavaSript 是一种动态语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据：123var a = 100    // a is Number nowa = &amp;apos;hello&amp;apos;    // a is String nowa = true       // a is Boolean now 数值（Numbe">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -166,7 +169,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>JavaSript 是一种动态语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = 100    // a is Number now</span><br><span class="line">a = &apos;hello&apos;    // a is String now</span><br><span class="line">a = true       // a is Boolean now</span><br></pre></td></tr></table></figure></p>
+<h2 id="数值（Number）"><a href="#数值（Number）" class="headerlink" title="数值（Number）"></a>数值（Number）</h2><p>根据 ECMAScript 标准，JavaScript 中只有一种数字类型：基于 IEEE 754 标准的双精度 64 位二进制格式的值。它并没有为整数给出一种特定的类型，所有数字都是小数（64位浮点数）。  </p>
+<p>除了能够表示浮点数外，还有一些带符号的值：<code>+Infinity</code>，<code>-Infinity</code> 和 <code>NaN</code> (非数值)。  </p>
+<a id="more"></a>
+<h2 id="字符串（String）"><a href="#字符串（String）" class="headerlink" title="字符串（String）"></a>字符串（String）</h2><p>JavaScript 的字符串类型用于表示文本数据。  </p>
+<p>它是一组16位的无符号整数值的“元素”。在字符串中的每个元素占据了字符串的位置。第一个元素的索引为0，下一个是索引1，依此类推。字符串的长度是它的元素的数量。</p>
+<h2 id="布尔值（Boolean）"><a href="#布尔值（Boolean）" class="headerlink" title="布尔值（Boolean）"></a>布尔值（Boolean）</h2><p>布尔表示一个逻辑实体，可以有两个值：<code>true</code> 和 <code>false</code>。<br>布尔运算：  </p>
+<ul>
+<li><code>&amp;&amp;</code>（与运算）遵循“一假及假”原则；  </li>
+<li><code>||</code>（或运算）遵循”一真及真“原则；</li>
+</ul>
+<p>五个虚值 falsy 值（通过 if 代码段将 falsy 值转换为false）：</p>
+<ul>
+<li><code>0</code></li>
+<li><code>NaN</code></li>
+<li><code>&#39;&#39;</code> 和 <code>&quot;&quot;</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code>  </li>
+</ul>
+<p>真值 truthy 值（通过 if 代码段将 truthy 值转换为true）：  </p>
+<ul>
+<li>除了被定位为 falsy 值的值都是 truthy 值</li>
+<li>对象都是 truthy 值，空对象也是 truthy 值</li>
+</ul>
+<h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><p>ES6 引入了一种新的原始数据类型Symbol，表示独一无二的值。  </p>
+<p>Symbol 值通过Symbol函数生成。这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// s 的类型为Symbol</span><br><span class="line">var s = Symbol()</span><br><span class="line"></span><br><span class="line">typeof s</span><br><span class="line">// &quot;symbol&quot;</span><br></pre></td></tr></table></figure></p>
+<p>凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 没有参数的情况</span><br><span class="line">var s1 = Symbol()</span><br><span class="line">var s2 = Symbol()</span><br><span class="line"></span><br><span class="line">s1 === s2 // false</span><br><span class="line"></span><br><span class="line">// 有参数的情况</span><br><span class="line">var s1 = Symbol(&apos;hello&apos;)</span><br><span class="line">var s2 = Symbol(&apos;hello&apos;)</span><br><span class="line"></span><br><span class="line">s1 === s2 // false</span><br></pre></td></tr></table></figure></p>
+<h2 id="Null-和-Undefined"><a href="#Null-和-Undefined" class="headerlink" title="Null 和 Undefined"></a>Null 和 Undefined</h2><h3 id="历史由来"><a href="#历史由来" class="headerlink" title="历史由来"></a>历史由来</h3><p>1995年 JavaScript 诞生时，最初像 Java 一样，只设置了 null 表示”无”。根据 C 语言的传统，null 可以自动转为0。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Number(null) // 0</span><br><span class="line">5 + null // 5</span><br></pre></td></tr></table></figure></p>
+<p>但是，JavaScript 的设计者 Brendan Eich 觉得这样做还不够。<br>首先，第一版的 JavaScript 里面，null 就像在 Java 里一样，被当成一个对象，Brendan Eich 觉得表示“无”的值最好不是对象。其次，那时的 JavaScript 不包括错误处理机制，Brendan Eich 觉得，如果null自动转为0，很不容易发现错误。</p>
+<p>因此，他又设计了一个 undefined。区别是这样的：null是一个表示“空”的对象，转为数值时为0；undefined 是一个表示”此处无定义”的原始值，转为数值时为 NaN。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Number(undefined) // NaN</span><br><span class="line">5 + undefined // NaN</span><br></pre></td></tr></table></figure></p>
+<h3 id="常规用法"><a href="#常规用法" class="headerlink" title="常规用法"></a>常规用法</h3><p>声明变量后，没有直接赋值 —— 默认赋值为 undefined<br>声明一个<strong>非对象变量</strong>时，没有直接赋值（想稍后赋值）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a    // 默认赋值为undefined</span><br><span class="line">var a = undefined    //直接赋值为undefined</span><br></pre></td></tr></table></figure></p>
+<p>声明一个<strong>对象变量</strong>时，没有直接赋值（想稍后赋值）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var obj = null    //直接赋值为null</span><br></pre></td></tr></table></figure></p>
+<h2 id="对象（Object）"><a href="#对象（Object）" class="headerlink" title="对象（Object）"></a>对象（Object）</h2><p>在计算机科学中, 对象是指内存中的可以被标识符引用的一块区域。（栈内存和堆内存）<br>对象就是一组“键值对”（key-value）的集合，是一种无序的复合数据集合。对象是复杂类型，由基本类型组成。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var name = &apos;kari&apos;</span><br><span class="line">var age = &apos;18&apos;</span><br><span class="line"></span><br><span class="line">typeof name      typeof age</span><br><span class="line">// &quot;string&quot;      // &quot;string&quot;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    &apos;name&apos; : &apos;kari&apos;,</span><br><span class="line">    &apos;age&apos; : &apos;18&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">typeof person</span><br><span class="line">// &quot;object&quot;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -236,7 +272,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数值（Number）"><span class="toc-number">1.</span> <span class="toc-text">数值（Number）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串（String）"><span class="toc-number">2.</span> <span class="toc-text">字符串（String）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#布尔值（Boolean）"><span class="toc-number">3.</span> <span class="toc-text">布尔值（Boolean）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Symbol"><span class="toc-number">4.</span> <span class="toc-text">Symbol</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Null-和-Undefined"><span class="toc-number">5.</span> <span class="toc-text">Null 和 Undefined</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#历史由来"><span class="toc-number">5.1.</span> <span class="toc-text">历史由来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常规用法"><span class="toc-number">5.2.</span> <span class="toc-text">常规用法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象（Object）"><span class="toc-number">6.</span> <span class="toc-text">对象（Object）</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -344,11 +380,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -356,7 +388,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
