@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Kari&#39;s Notes</title>
+  <title>var 和 let 的区别 | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kari&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="let 不允许重复声明let 不允许在同一作用域重复声明：1234let a = 1let a = &amp;apos;hello&amp;apos;// Uncaught SyntaxError: Identifier &amp;apos;a&amp;apos; has already been declared var 可以重复声明，并且后面的声明将前面的声明覆盖：12345var a = 1var a = &amp;apos;he">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="var 和 let 的区别">
+<meta property="og:url" content="http://yoursite.com/2019/04/04/var和let的区别/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
+<meta property="og:description" content="let 不允许重复声明let 不允许在同一作用域重复声明：1234let a = 1let a = &amp;apos;hello&amp;apos;// Uncaught SyntaxError: Identifier &amp;apos;a&amp;apos; has already been declared var 可以重复声明，并且后面的声明将前面的声明覆盖：12345var a = 1var a = &amp;apos;he">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-03T18:09:25.176Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kari&#39;s Notes">
+<meta name="twitter:title" content="var 和 let 的区别">
+<meta name="twitter:description" content="let 不允许重复声明let 不允许在同一作用域重复声明：1234let a = 1let a = &amp;apos;hello&amp;apos;// Uncaught SyntaxError: Identifier &amp;apos;a&amp;apos; has already been declared var 可以重复声明，并且后面的声明将前面的声明覆盖：12345var a = 1var a = &amp;apos;he">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -144,36 +149,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-var和let的区别" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      var 和 let 的区别
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/04/var和let的区别/" class="archive-article-date">
+
+        
+        <a href="/2019/04/04/var和let的区别/" class="archive-article-date">
   	<time datetime="2019-04-03T18:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/04/var和let的区别/">var 和 let 的区别</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="let-不允许重复声明"><a href="#let-不允许重复声明" class="headerlink" title="let 不允许重复声明"></a>let 不允许重复声明</h2><p><code>let</code> 不允许在同一作用域重复声明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let a = 1</span><br><span class="line">let a = &apos;hello&apos;</span><br><span class="line"></span><br><span class="line">// Uncaught SyntaxError: Identifier &apos;a&apos; has already been declared</span><br></pre></td></tr></table></figure></p>
+<p><code>var</code> 可以重复声明，并且后面的声明将前面的声明覆盖：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 1</span><br><span class="line">var a = &apos;hello&apos;</span><br><span class="line">console.log(a)</span><br><span class="line"></span><br><span class="line">// hello</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="let-声明的变量是块级作用域变量"><a href="#let-声明的变量是块级作用域变量" class="headerlink" title="let 声明的变量是块级作用域变量"></a>let 声明的变量是块级作用域变量</h2><p><code>let</code> 声明的变量是块级作用域变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    let a = 100</span><br><span class="line">&#125;</span><br><span class="line">console.log(a)</span><br><span class="line"></span><br><span class="line">// Uncaught ReferenceError: a is not defined at &lt;anonymous&gt;:5:13</span><br></pre></td></tr></table></figure></p>
+<p><code>var</code> 声明的变量是全局变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    var a = 100</span><br><span class="line">&#125;</span><br><span class="line">console.log(a)</span><br><span class="line"></span><br><span class="line">// 100</span><br></pre></td></tr></table></figure></p>
+<h2 id="let-没有变量提升"><a href="#let-没有变量提升" class="headerlink" title="let 没有变量提升"></a>let 没有变量提升</h2><p><code>let</code> 声明的变量不存在变量提升，并且必须在 <code>let</code> 声明变量后才可以使用该变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 先使用，后声明</span><br><span class="line">console.log(person1)</span><br><span class="line">let person1 = &apos;kari&apos;</span><br><span class="line"></span><br><span class="line">// Uncaught SyntaxError: Identifier &apos;person1&apos; has already been declaredat &lt;anonymous&gt;:1:1</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 先声明，后使用</span><br><span class="line">let person1 = &apos;kari&apos;</span><br><span class="line">console.log(person1)</span><br><span class="line"></span><br><span class="line">// kari</span><br></pre></td></tr></table></figure>
+<p><code>var</code> 声明的变量会变量提升：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">console.log(person1)</span><br><span class="line">var person1 = &apos;kari&apos;</span><br><span class="line"></span><br><span class="line">// undefined</span><br><span class="line"></span><br><span class="line">//等同于</span><br><span class="line">var person = undefined</span><br><span class="line">console.log(person1)</span><br><span class="line">person1 = &apos;kari&apos;</span><br><span class="line"></span><br><span class="line">// undefined</span><br></pre></td></tr></table></figure></p>
+<h2 id="let-会造成暂时性死区"><a href="#let-会造成暂时性死区" class="headerlink" title="let 会造成暂时性死区"></a>let 会造成暂时性死区</h2><p>由于 <code>let</code> 前面的特性，就很容易造成“暂时性死区”现象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var s = 123;</span><br><span class="line">if (true) &#123;</span><br><span class="line">  s = &apos;abc&apos;</span><br><span class="line">  let s</span><br><span class="line">  console.log(s)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Uncaught ReferenceError: s is not defined at &lt;anonymous&gt;:3:7</span><br></pre></td></tr></table></figure></p>
+<p><code>var</code> 声明了全局变量 <code>s</code>，但是在块级作用域内 <code>let</code> 声明了变量 <code>s</code> 后，<code>let</code> 所声明的变量变绑定了这一作用域，不再受外部的影响。<br>并且必须在 <code>let</code> 声明变量后才可以使用该变量，但是上面代码由于没有先 <code>let</code> 声量变量，所以报错。  </p>
+<p><code>var</code> 声明变量时不会造成“暂时性死区”现象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var s = 123</span><br><span class="line">if (true) &#123;</span><br><span class="line">  s = &apos;abc&apos;</span><br><span class="line">  var s</span><br><span class="line">  console.log(s)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// abc</span><br></pre></td></tr></table></figure></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,361 +199,68 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/03/JS原型与原型链/" class="archive-article-date">
-  	<time datetime="2019-04-02T16:17:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/03/JS原型与原型链/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS原型与原型链</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/03/JS原型与原型链/">JS原型与原型链</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#let-不允许重复声明"><span class="toc-number">1.</span> <span class="toc-text">let 不允许重复声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#let-声明的变量是块级作用域变量"><span class="toc-number">2.</span> <span class="toc-text">let 声明的变量是块级作用域变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#let-没有变量提升"><span class="toc-number">3.</span> <span class="toc-text">let 没有变量提升</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#let-会造成暂时性死区"><span class="toc-number">4.</span> <span class="toc-text">let 会造成暂时性死区</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/02/JS数据类型的转换/" class="archive-article-date">
-  	<time datetime="2019-04-01T16:12:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-02</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/02/JS数据类型的转换/">JS数据类型的转换</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/30/JS的数据类型/" class="archive-article-date">
-  	<time datetime="2019-03-30T15:05:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/30/JS的数据类型/">JS的数据类型</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/25/CSS的布局与居中/" class="archive-article-date">
-  	<time datetime="2019-03-25T15:12:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/25/CSS的布局与居中/">CSS的布局与居中</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/22/去年的我/" class="archive-article-date">
-  	<time datetime="2019-03-22T12:43:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/22/去年的我/">去年的我</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/21/HTML的常用标签/" class="archive-article-date">
-  	<time datetime="2019-03-21T07:36:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/21/HTML的常用标签/">HTML的常用标签</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/19/HTTP的请求与响应/" class="archive-article-date">
-  	<time datetime="2019-03-18T16:57:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/19/HTTP的请求与响应/">HTTP的请求与响应</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/命令行中常见命令用法及explainshell-com的用法/" class="archive-article-date">
-  	<time datetime="2019-03-16T13:26:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/命令行中常见命令用法及explainshell-com的用法/">命令行中常见命令用法及explainshell.com的用法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">命令行</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/13/开博大吉/" class="archive-article-date">
-  	<time datetime="2019-03-13T12:52:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/13/开博大吉/">开博大吉</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -562,8 +283,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
