@@ -8,15 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>关于 DOM 的理解 | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="js">
+  <meta name="description" content="什么是 DOMDOM === 想象的树型结构模型 DOM 提供的 API 的作用就是修改或者查看 HTML 代码； DOM 的 D 指的是Document，可以认为是 HTML 文档； DOM 中的 O 指的是 Object，他是在内存中，按照树型结构，通过构造函数(如 Node, Document, Element, Text, Comment)，构造出对象，将 DOM 展现到内存中； DOM">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于 DOM 的理解">
 <meta property="og:url" content="http://yoursite.com/2019/04/06/关于DOM的理解/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
+<meta property="og:description" content="什么是 DOMDOM === 想象的树型结构模型 DOM 提供的 API 的作用就是修改或者查看 HTML 代码； DOM 的 D 指的是Document，可以认为是 HTML 文档； DOM 中的 O 指的是 Object，他是在内存中，按照树型结构，通过构造函数(如 Node, Document, Element, Text, Comment)，构造出对象，将 DOM 展现到内存中； DOM">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-09T05:16:03.593Z">
+<meta property="og:updated_time" content="2019-04-10T12:32:02.896Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于 DOM 的理解">
+<meta name="twitter:description" content="什么是 DOMDOM === 想象的树型结构模型 DOM 提供的 API 的作用就是修改或者查看 HTML 代码； DOM 的 D 指的是Document，可以认为是 HTML 文档； DOM 中的 O 指的是 Object，他是在内存中，按照树型结构，通过构造函数(如 Node, Document, Element, Text, Comment)，构造出对象，将 DOM 展现到内存中； DOM">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -166,7 +169,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="什么是-DOM"><a href="#什么是-DOM" class="headerlink" title="什么是 DOM"></a>什么是 DOM</h2><p>DOM === 想象的树型结构模型</p>
+<p>DOM 提供的 API 的作用就是修改或者查看 HTML 代码；</p>
+<p>DOM 的 D 指的是Document，可以认为是 HTML 文档；</p>
+<p>DOM 中的 O 指的是 Object，他是在内存中，按照树型结构，通过构造函数(如 Node, Document, Element, Text, Comment)，构造出对象，将 DOM 展现到内存中；</p>
+<p>DOM 的 M 指的是 Model，因为在 HTML 结构在内存中用一个模型来表示，这个模型就是树型结构。</p>
+<a id="more"></a>
+<h2 id="使用-DOM"><a href="#使用-DOM" class="headerlink" title="使用 DOM"></a>使用 DOM</h2><p>JavaScript 将 HTML 文档渲染成 DOM 的树型结构。</p>
+<p>获取 DOM 的节点：</p>
+<ul>
+<li>直接在 DOM 寻找: <code>document.querySelector(aabb)</code> 和 <code>document.querySelectorAll(aabb)</code> </li>
+<li>通过节点关系获得节点：<br>兄弟关系  儿子关系  父关系   </li>
+</ul>
+<p>了解 DOM 的节点:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Node.nodeName  </span><br><span class="line">Node.nodeType  </span><br><span class="line">Node.textContent</span><br></pre></td></tr></table></figure></p>
+<p>创建 DOM 的节点:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.createElement(&quot;div&quot;)</span><br><span class="line">// 生成 Element 节点</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.createTextNode(&quot;你好&quot;)</span><br><span class="line">// 生成 Text 节点</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -236,7 +254,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-DOM"><span class="toc-number">1.</span> <span class="toc-text">什么是 DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-DOM"><span class="toc-number">2.</span> <span class="toc-text">使用 DOM</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -344,7 +362,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -352,19 +370,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">命令行</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
              
               <li class="article-tag-list-item">
