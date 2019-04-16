@@ -6,17 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>层叠顺序和层叠上下文 | Kari&#39;s Notes</title>
+  <title>BFC 块格式化上下文 | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="css">
+  <meta name="description" content="块格式化上下文（Block Formatting Context，BFC）是 Web 页面的可视化 CSS 渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。 通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="层叠顺序和层叠上下文">
-<meta property="og:url" content="http://yoursite.com/2019/04/14/层叠顺序和层叠上下文/index.html">
+<meta property="og:title" content="BFC 块格式化上下文">
+<meta property="og:url" content="http://yoursite.com/2019/04/14/BFC块格式化上下文/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
+<meta property="og:description" content="块格式化上下文（Block Formatting Context，BFC）是 Web 页面的可视化 CSS 渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。 通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-16T13:44:30.451Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/4/17/16a27460756db587?w=903&h=166&f=png&s=1043">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/4/17/16a274519577fd99?w=898&h=163&f=png&s=1106">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/4/17/16a2758c20283578?w=897&h=313&f=png&s=2641">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/4/17/16a275b247aa64b7?w=896&h=314&f=png&s=2915">
+<meta property="og:updated_time" content="2019-04-16T18:22:29.437Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="层叠顺序和层叠上下文">
+<meta name="twitter:title" content="BFC 块格式化上下文">
+<meta name="twitter:description" content="块格式化上下文（Block Formatting Context，BFC）是 Web 页面的可视化 CSS 渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。 具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。 通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/4/17/16a27460756db587?w=903&h=166&f=png&s=1043">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -146,27 +154,56 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-层叠顺序和层叠上下文" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-BFC块格式化上下文" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      层叠顺序和层叠上下文
+      BFC 块格式化上下文
     </h1>
   
 
         
-        <a href="/2019/04/14/层叠顺序和层叠上下文/" class="archive-article-date">
-  	<time datetime="2019-04-13T16:55:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
+        <a href="/2019/04/14/BFC块格式化上下文/" class="archive-article-date">
+  	<time datetime="2019-04-14T15:42:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>块格式化上下文（Block Formatting Context，BFC）是 Web 页面的可视化 CSS 渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。</p>
+<p>具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。</p>
+<p>通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无论如何翻江倒海，都不会影响到外部。</p>
+<p>在一个块格式化上下文中，每个盒的 left 外边（left outer edge）挨着包含块的 left 边（对于从右向左的格式化，right 边挨着）。即使存在浮动（尽管一个盒的行盒可能会因为浮动收缩），这也成立。除非该盒建立了一个新的块格式化上下文。（这种情况下，该盒自身可能会因为浮动变窄）</p>
+<a id="more"></a>
+<h2 id="触发-BFC"><a href="#触发-BFC" class="headerlink" title="触发 BFC"></a>触发 BFC</h2><p>下列方式会创建块格式化上下文：</p>
+<ul>
+<li>根元素或包含根元素的元素；</li>
+<li>浮动元素（元素的 <code>float</code> 不是 <code>none</code>）；</li>
+<li>绝对定位元素（元素的 <code>position</code> 为 <code>absolute</code> 或 <code>fixed</code>）；</li>
+<li>行内块元素（元素的 <code>display</code> 为 <code>inline-block</code>）；</li>
+<li>表格单元格（元素的 <code>display</code>为 <code>table-cell</code>，HTML 表格单元格默认为该值）；</li>
+<li>表格标题（元素的 <code>display</code> 为 <code>table-caption</code>，HTML 表格标题默认为该值）；</li>
+<li>匿名表格单元格元素（元素的 <code>display</code> 为 <code>table</code>、<code>table-row</code>、 <code>table-row-group</code>、<code>table-header-group</code>、<code>table-footer-group</code>（分别是HTML table、row、tbody、thead、tfoot的默认属性）或 <code>inline-table</code>）；</li>
+<li><code>overflow</code> 值不为 <code>visible</code> 的块元素；</li>
+<li><strong><code>display</code> 值为 <code>flow-root</code> 的元素；</strong>（无任何副作用）</li>
+<li><code>contain</code> 值为 <code>layout</code>、<code>content</code>或 <code>strict</code> 的元素；</li>
+<li>弹性元素（<code>display</code> 为 <code>flex</code> 或 <code>inline-flex</code> 元素的直接子元素）；</li>
+<li>网格元素（<code>display</code> 为 <code>grid</code> 或 <code>inline-grid</code> 元素的直接子元素）；</li>
+<li>多列容器（元素的 <code>column-count</code> 或 <code>column-width</code> 不为 <code>auto</code>，包括 <code>column-count</code> 为 1）；</li>
+<li><code>column-span</code> 为 <code>all</code> 的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中。<h2 id="应用-BFC"><a href="#应用-BFC" class="headerlink" title="应用 BFC"></a>应用 BFC</h2><h3 id="让浮动内容和周围的内容等高"><a href="#让浮动内容和周围的内容等高" class="headerlink" title="让浮动内容和周围的内容等高"></a>让浮动内容和周围的内容等高</h3>由于层叠顺序，会使得浮动元素与周围的内容不等高，造成 bug：<br><img src="https://user-gold-cdn.xitu.io/2019/4/17/16a27460756db587?w=903&amp;h=166&amp;f=png&amp;s=1043" alt><br>应用 BFC 让浮动内容和周围的内容等高。<br>html 代码如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>css 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">  border: 2px solid black;</span><br><span class="line">  display: flow-root;  // 触发 BFC</span><br><span class="line">&#125;</span><br><span class="line">.child &#123;</span><br><span class="line">  height: 100px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  background: red;</span><br><span class="line">  float: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/4/17/16a274519577fd99?w=898&amp;h=163&amp;f=png&amp;s=1106" alt></p>
+<h3 id="阻止元素被浮动元素覆盖"><a href="#阻止元素被浮动元素覆盖" class="headerlink" title="阻止元素被浮动元素覆盖"></a>阻止元素被浮动元素覆盖</h3><p>由于层叠顺序，使得浮动元素的 z 轴在文本内容和块级元素之间，造成浮动元素覆盖块级元素却不覆盖文本内容的 bug。(当然，浮动属性被设计的原因便是需要文字环绕在被浮动的图片周围，给论文排版以便利)<br><img src="https://user-gold-cdn.xitu.io/2019/4/17/16a2758c20283578?w=897&amp;h=313&amp;f=png&amp;s=2641" alt><br>应用 BFC 阻止元素被浮动元素覆盖，将两个元素彻底分离开。<br>html 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;left&quot;&gt;左&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;right&quot;&gt;右&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>css 代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.left &#123;</span><br><span class="line">  border: 2px solid red;</span><br><span class="line">  height: 200px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  float: left;</span><br><span class="line">&#125;</span><br><span class="line">.right &#123;</span><br><span class="line">  border: 2px solid green;</span><br><span class="line">  height: 200px;</span><br><span class="line">  background: green;</span><br><span class="line">  display: flow-root;  // 触发 BFC</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/4/17/16a275b247aa64b7?w=896&amp;h=314&amp;f=png&amp;s=2915" alt></p>
+<h3 id="外边距塌陷"><a href="#外边距塌陷" class="headerlink" title="外边距塌陷"></a>外边距塌陷</h3><p>在一个块格式化上下文中，盒在竖直方向一个接一个地放置，从包含块的顶部开始。两个兄弟盒之间的竖直距离由 <code>margin</code> 属性决定，同一个块格式化上下文中的相邻块级盒之间的竖直 <code>margin</code> 会合并。</p>
+
       
 
       
@@ -198,18 +235,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/14/flex布局/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/16/移动端配适/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          FLEX 布局
+          移动端配适
         
       </div>
     </a>
   
   
-    <a href="/2019/04/10/盒模型/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">盒模型</div>
+    <a href="/2019/04/12/flex布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Flex 布局</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -236,7 +273,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#触发-BFC"><span class="toc-number">1.</span> <span class="toc-text">触发 BFC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用-BFC"><span class="toc-number">2.</span> <span class="toc-text">应用 BFC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#让浮动内容和周围的内容等高"><span class="toc-number">2.1.</span> <span class="toc-text">让浮动内容和周围的内容等高</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#阻止元素被浮动元素覆盖"><span class="toc-number">2.2.</span> <span class="toc-text">阻止元素被浮动元素覆盖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外边距塌陷"><span class="toc-number">2.3.</span> <span class="toc-text">外边距塌陷</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -344,7 +381,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -356,7 +393,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">

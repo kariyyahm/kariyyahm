@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>块级格式化上下文 | Kari&#39;s Notes</title>
+  <title>层叠顺序和层叠上下文 | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="css">
+  <meta name="description" content="层叠顺序层叠顺序（stacking order），表示元素发生层叠时候有着特定的垂直显示顺序。">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="块级格式化上下文">
-<meta property="og:url" content="http://yoursite.com/2019/04/15/块级格式化上下文/index.html">
+<meta property="og:title" content="层叠顺序和层叠上下文">
+<meta property="og:url" content="http://yoursite.com/2019/04/11/层叠顺序和层叠上下文/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
+<meta property="og:description" content="层叠顺序层叠顺序（stacking order），表示元素发生层叠时候有着特定的垂直显示顺序。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-16T13:46:25.413Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/4/16/16a269008cb28de8?w=1442&h=855&f=png&s=356315">
+<meta property="og:updated_time" content="2019-04-16T14:33:32.959Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="块级格式化上下文">
+<meta name="twitter:title" content="层叠顺序和层叠上下文">
+<meta name="twitter:description" content="层叠顺序层叠顺序（stacking order），表示元素发生层叠时候有着特定的垂直显示顺序。">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/4/16/16a269008cb28de8?w=1442&h=855&f=png&s=356315">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -146,27 +151,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-块级格式化上下文" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-层叠顺序和层叠上下文" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      块级格式化上下文
+      层叠顺序和层叠上下文
     </h1>
   
 
         
-        <a href="/2019/04/15/块级格式化上下文/" class="archive-article-date">
-  	<time datetime="2019-04-15T15:42:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-15</time>
+        <a href="/2019/04/11/层叠顺序和层叠上下文/" class="archive-article-date">
+  	<time datetime="2019-04-10T16:55:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="层叠顺序"><a href="#层叠顺序" class="headerlink" title="层叠顺序"></a>层叠顺序</h2><p>层叠顺序（stacking order），表示元素发生层叠时候有着特定的垂直显示顺序。<br><img src="https://user-gold-cdn.xitu.io/2019/4/16/16a269008cb28de8?w=1442&amp;h=855&amp;f=png&amp;s=356315" alt></p>
+<a id="more"></a>
+<ol>
+<li>z-index: -</li>
+<li>background</li>
+<li>border</li>
+<li>块级</li>
+<li>浮动</li>
+<li>内联</li>
+<li>z-index: 0</li>
+<li>z-index: +  </li>
+</ol>
+<p>如果是同级元素重叠，那么后面元素盖在前面元素的身上。</p>
+<h2 id="层叠上下文"><a href="#层叠上下文" class="headerlink" title="层叠上下文"></a>层叠上下文</h2><p>层叠上下文是 HTML 元素的三维概念，这些 HTML 元素在一条假想的相对于面向（电脑屏幕的）视窗或者网页的用户的 z 轴上延伸，HTML 元素依据其自身属性按照优先级顺序占用层叠上下文的空间。</p>
+<p>某些 <code>div</code> 的渲染顺序是由 <code>z-index</code> 的值影响的。这是因为这些 <code>div</code> 具有使他们形成一个层叠上下文的特殊属性。</p>
+<p>文档中的层叠上下文由满足以下任意一个条件的元素形成：</p>
+<ul>
+<li>根元素（HTML）；</li>
+<li><code>z-index</code> 值不为 <code>auto</code> 的 绝对/相对定位 元素；</li>
+<li>一个 <code>z-index</code> 值不为 <code>auto</code> 的 <code>flex</code> 项目 (flex item)，即：父元素 <code>display: flex/ inline-flex</code>；</li>
+<li><code>opacity</code> 属性值小于 1 的元素；</li>
+<li><code>transform</code> 属性值不为 <code>none</code> 的元素；</li>
+<li><code>mix-blend-mode</code> 属性值不为 “normal”的元素；</li>
+<li><code>filter</code> 值不为 <code>none</code> 的元素；</li>
+<li><code>perspective</code> 值不为 <code>none</code> 的元素；</li>
+<li><code>isolation</code> 属性被设置为 <code>isolate</code> 的元素；</li>
+<li><code>position: fixed</code>;</li>
+<li><code>-webkit-overflow-scrolling</code> 属性被设置 <code>touch</code> 的元素。</li>
+</ul>
+<p>在层叠上下文中，其子元素同样也按照上面解释的规则进行层叠。<br>特别值得一提的是，其子元素的 z-index 值只在父级层叠上下文中有意义。子级层叠上下文被自动视为父级层叠上下文的一个独立单元。</p>
+<p>总结:</p>
+<ul>
+<li>给一个 HTML 元素定位和 z-index 赋值创建一个层叠上下文，（opacity 值不为 1 的也是相同）。</li>
+<li>层叠上下文可以包含在其他层叠上下文中，并且一起创建一个有层级的层叠上下文。</li>
+<li>每个层叠上下文完全独立于它的兄弟元素：当处理层叠时只考虑子元素。</li>
+<li>每个层叠上下文是自包含的：当元素的内容发生层叠后，整个该元素将会 在父层叠上下文中 按顺序进行层叠。</li>
+</ul>
+
       
 
       
@@ -198,18 +240,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/16/移动端配适/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/12/flex布局/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          移动端配适
+          Flex 布局
         
       </div>
     </a>
   
   
-    <a href="/2019/04/14/flex布局/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">FLEX 布局</div>
+    <a href="/2019/04/10/盒模型/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">盒模型</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -236,7 +278,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#层叠顺序"><span class="toc-number">1.</span> <span class="toc-text">层叠顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#层叠上下文"><span class="toc-number">2.</span> <span class="toc-text">层叠上下文</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -344,7 +386,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -356,7 +398,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">

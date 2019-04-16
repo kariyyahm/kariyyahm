@@ -219,26 +219,32 @@
 
 
   
-    <article id="post-块级格式化上下文" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-BFC块格式化上下文" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/15/块级格式化上下文/">块级格式化上下文</a>
+      <a class="article-title" href="/2019/04/14/BFC块格式化上下文/">BFC 块格式化上下文</a>
     </h1>
   
 
         
-        <a href="/2019/04/15/块级格式化上下文/" class="archive-article-date">
-  	<time datetime="2019-04-15T15:42:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-15</time>
+        <a href="/2019/04/14/BFC块格式化上下文/" class="archive-article-date">
+  	<time datetime="2019-04-14T15:42:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <p>块格式化上下文（Block Formatting Context，BFC）是 Web 页面的可视化 CSS 渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。</p>
+<p>具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。</p>
+<p>通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无论如何翻江倒海，都不会影响到外部。</p>
+<p>在一个块格式化上下文中，每个盒的 left 外边（left outer edge）挨着包含块的 left 边（对于从右向左的格式化，right 边挨着）。即使存在浮动（尽管一个盒的行盒可能会因为浮动收缩），这也成立。除非该盒建立了一个新的块格式化上下文。（这种情况下，该盒自身可能会因为浮动变窄）</p>
+        
+          <a class="article-more-a" href="/2019/04/14/BFC块格式化上下文/#more">more >></a>
         
       
 
@@ -262,7 +268,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/15/块级格式化上下文/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/14/BFC块格式化上下文/">展开全文 >></a>
         </p>
       
 
@@ -299,19 +305,29 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/14/flex布局/">FLEX 布局</a>
+      <a class="article-title" href="/2019/04/12/flex布局/">Flex 布局</a>
     </h1>
   
 
         
-        <a href="/2019/04/14/flex布局/" class="archive-article-date">
-  	<time datetime="2019-04-14T15:22:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
+        <a href="/2019/04/12/flex布局/" class="archive-article-date">
+  	<time datetime="2019-04-12T15:22:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="Flex-之前"><a href="#Flex-之前" class="headerlink" title="Flex 之前"></a>Flex 之前</h2><p>flex 值未被添加时的布局方法：</p>
+<ul>
+<li>normal flow（文档流）</li>
+<li>float + clearfix</li>
+<li>positon: relative + absolute</li>
+<li>display: inline-block</li>
+<li>margin: -  </li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/04/12/flex布局/#more">more >></a>
         
       
 
@@ -335,7 +351,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/14/flex布局/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/12/flex布局/">展开全文 >></a>
         </p>
       
 
@@ -372,19 +388,22 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/14/层叠顺序和层叠上下文/">层叠顺序和层叠上下文</a>
+      <a class="article-title" href="/2019/04/11/层叠顺序和层叠上下文/">层叠顺序和层叠上下文</a>
     </h1>
   
 
         
-        <a href="/2019/04/14/层叠顺序和层叠上下文/" class="archive-article-date">
-  	<time datetime="2019-04-13T16:55:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
+        <a href="/2019/04/11/层叠顺序和层叠上下文/" class="archive-article-date">
+  	<time datetime="2019-04-10T16:55:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="层叠顺序"><a href="#层叠顺序" class="headerlink" title="层叠顺序"></a>层叠顺序</h2><p>层叠顺序（stacking order），表示元素发生层叠时候有着特定的垂直显示顺序。<br><img src="https://user-gold-cdn.xitu.io/2019/4/16/16a269008cb28de8?w=1442&amp;h=855&amp;f=png&amp;s=356315" alt></p>
+        
+          <a class="article-more-a" href="/2019/04/11/层叠顺序和层叠上下文/#more">more >></a>
         
       
 
@@ -408,7 +427,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/14/层叠顺序和层叠上下文/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/11/层叠顺序和层叠上下文/">展开全文 >></a>
         </p>
       
 
@@ -998,7 +1017,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1010,7 +1029,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
               <li class="article-tag-list-item">
