@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/4 | Kari&#39;s Notes</title>
+  <title>移动端配适与掌握动态 REM | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kari&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/archives/2019/04/index.html">
+  <meta name="description" content="移动端配适媒体查询（响应式）media query：自动探测屏幕类型及宽度，符合条件时加载 css 样式。   link 标签中的 css 媒体查询：12&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style1.css&amp;quot; media=&amp;quot;(min-width: 400px) and (max-width: 1000px)&amp;quot">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端配适与掌握动态 REM">
+<meta property="og:url" content="http://yoursite.com/2019/04/16/移动端配适与掌握动态REM/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
+<meta property="og:description" content="移动端配适媒体查询（响应式）media query：自动探测屏幕类型及宽度，符合条件时加载 css 样式。   link 标签中的 css 媒体查询：12&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style1.css&amp;quot; media=&amp;quot;(min-width: 400px) and (max-width: 1000px)&amp;quot">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-16T19:07:51.492Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kari&#39;s Notes">
+<meta name="twitter:title" content="移动端配适与掌握动态 REM">
+<meta name="twitter:description" content="移动端配适媒体查询（响应式）media query：自动探测屏幕类型及宽度，符合条件时加载 css 样式。   link 标签中的 css 媒体查询：12&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style1.css&amp;quot; media=&amp;quot;(min-width: 400px) and (max-width: 1000px)&amp;quot">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -144,36 +149,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-移动端配适与掌握动态REM" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      移动端配适与掌握动态 REM
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/16/移动端配适与掌握动态REM/" class="archive-article-date">
+
+        
+        <a href="/2019/04/16/移动端配适与掌握动态REM/" class="archive-article-date">
   	<time datetime="2019-04-16T09:32:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/16/移动端配适与掌握动态REM/">移动端配适与掌握动态 REM</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="移动端配适"><a href="#移动端配适" class="headerlink" title="移动端配适"></a>移动端配适</h2><h3 id="媒体查询（响应式）"><a href="#媒体查询（响应式）" class="headerlink" title="媒体查询（响应式）"></a>媒体查询（响应式）</h3><p><code>media query</code>：自动探测屏幕类型及宽度，符合条件时加载 css 样式。  </p>
+<p>link 标签中的 css 媒体查询：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;style1.css&quot; media=&quot;(min-width: 400px) and (max-width: 1000px)&quot;&gt;</span><br><span class="line">// 当屏幕大于 400px 并且小于 1000px 时，引用 style1.css 样式表</span><br></pre></td></tr></table></figure></p>
+<p>html 中的 css 媒体查询：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    @media( min-width: 400px and max-width: 800px)&#123;</span><br><span class="line">        body&#123;</span><br><span class="line">         background: red;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">// 当屏幕大于 400px 并且小于 1000px 时，body 的背景色为红色</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="meta-viewport"><a href="#meta-viewport" class="headerlink" title="meta viewport"></a>meta viewport</h3><p>开发移动端界面时，一定要加这句代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>viewport</code>：视口，浏览器可视区域宽度和高度；</li>
+<li><code>width=device-width</code>: 默认网页宽度等于屏幕宽度；</li>
+<li><code>user-scalable=no</code>: 禁止用户缩放；</li>
+<li><code>initial-scale=1.0</code>: 原始缩放比例为 1.0；</li>
+<li><code>maximum-scale=1.0</code>: 最大缩放比例为 1.0；</li>
+<li><code>minimum-scale=1.0</code>: 最小缩放比例为 1.0。<h3 id="移动端特点"><a href="#移动端特点" class="headerlink" title="移动端特点"></a>移动端特点</h3></li>
+<li>没有 <code>hover</code> 伪类</li>
+<li>有 <code>touch</code> 事件</li>
+<li>没有 <code>resize</code> 属性</li>
+<li>没有滚动条<h2 id="动态-REM"><a href="#动态-REM" class="headerlink" title="动态 REM"></a>动态 REM</h2><h3 id="REM"><a href="#REM" class="headerlink" title="REM"></a>REM</h3>在 css 中有很多长度单位，比如：</li>
+<li>px 表示一个像素点；</li>
+<li>em 表示元素的font-size的计算值（一个M的宽度）；</li>
+<li>vh 视口高度的 1/100；</li>
+<li>vw 视口宽度的 1/100。</li>
+</ul>
+<p>rem 也是一个长度单位，这个单位代表根元素（html）的 <code>font-size</code> 的大小。</p>
+<p>em 和 rem 的区别：em 取自己的 <code>font-size</code> 计算值，rem 取根元素的 <code>font-size</code> 计算值。</p>
+<p>网页上的字体大小默认是 <strong>16px</strong>。</p>
+<h3 id="移动端方案的特点"><a href="#移动端方案的特点" class="headerlink" title="移动端方案的特点"></a>移动端方案的特点</h3><ul>
+<li>所有手机显示的界面都是一样的，只是大小不同</li>
+<li><p>1 rem == html font-size == viewport width</p>
+<h3 id="使用-JS-动态调整-REM"><a href="#使用-JS-动态调整-REM" class="headerlink" title="使用 JS 动态调整 REM"></a>使用 JS 动态调整 REM</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt;</span><br><span class="line"> &lt;script&gt;</span><br><span class="line">     var pageWidth = window.innerWidth</span><br><span class="line">     document.write(&apos;&lt;style&gt;html&#123;font-size:&apos;+pageWidth+&apos;px;&#125;&lt;/style&gt;&apos;)</span><br><span class="line"> &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>上面代码，将根元素的 <code>font-size</code> 设置为设备宽度。写页面的时候，直接使用 rem 单位作为长度单位，便可以实现自适应布局。</p>
+<h3 id="REM-可以与其他单位同时存在"><a href="#REM-可以与其他单位同时存在" class="headerlink" title="REM 可以与其他单位同时存在"></a>REM 可以与其他单位同时存在</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">font-size: 16px;</span><br><span class="line">border: 1px solid red;</span><br><span class="line">width: 0.5rem;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,364 +219,67 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/14/BFC块格式化上下文/" class="archive-article-date">
-  	<time datetime="2019-04-14T15:42:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/14/BFC块格式化上下文/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BFC 块格式化上下文</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/14/BFC块格式化上下文/">BFC 块格式化上下文</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端配适"><span class="toc-number">1.</span> <span class="toc-text">移动端配适</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#媒体查询（响应式）"><span class="toc-number">1.1.</span> <span class="toc-text">媒体查询（响应式）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#meta-viewport"><span class="toc-number">1.2.</span> <span class="toc-text">meta viewport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动端特点"><span class="toc-number">1.3.</span> <span class="toc-text">移动端特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态-REM"><span class="toc-number">2.</span> <span class="toc-text">动态 REM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#REM"><span class="toc-number">2.1.</span> <span class="toc-text">REM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动端方案的特点"><span class="toc-number">2.2.</span> <span class="toc-text">移动端方案的特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-JS-动态调整-REM"><span class="toc-number">2.3.</span> <span class="toc-text">使用 JS 动态调整 REM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#REM-可以与其他单位同时存在"><span class="toc-number">2.4.</span> <span class="toc-text">REM 可以与其他单位同时存在</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/12/flex布局/" class="archive-article-date">
-  	<time datetime="2019-04-12T15:22:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/12/flex布局/">Flex 布局</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/11/层叠顺序和层叠上下文/" class="archive-article-date">
-  	<time datetime="2019-04-10T16:55:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/11/层叠顺序和层叠上下文/">层叠顺序和层叠上下文</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/10/盒模型/" class="archive-article-date">
-  	<time datetime="2019-04-10T14:31:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/10/盒模型/">盒模型</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/09/实现一个jQuery的API/" class="archive-article-date">
-  	<time datetime="2019-04-09T04:46:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/09/实现一个jQuery的API/">实现一个简单的 jQuery 的 API</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/07/JS中的this和arguments/" class="archive-article-date">
-  	<time datetime="2019-04-07T15:40:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/07/JS中的this和arguments/">JS 中的 this 和 arguments</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/06/关于DOM的理解/" class="archive-article-date">
-  	<time datetime="2019-04-06T07:59:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/06/关于DOM的理解/">关于 DOM 的理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/04/var和let的区别/" class="archive-article-date">
-  	<time datetime="2019-04-03T18:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/04/var和let的区别/">var 和 let 的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/03/JS原型与原型链/" class="archive-article-date">
-  	<time datetime="2019-04-02T16:17:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/03/JS原型与原型链/">JS 原型与原型链</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/04/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/04/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -566,8 +303,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
