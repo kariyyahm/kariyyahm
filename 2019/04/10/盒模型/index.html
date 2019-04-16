@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JS 中的 this 和 arguments | Kari&#39;s Notes</title>
+  <title>盒模型 | Kari&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this在 JavaScript 中， 函数有两种调用方式：123456789function sum(x, y) &amp;#123;    return x + y&amp;#125;// 第一种方式sum(1, 2)    // 3// 第二种方式sum.call(undefined, 1, 2)    // 3 第一种方式是常用的方法调用函数，第二种是使用 call() 方法调用函数，在使用后者调用函数时">
-<meta name="keywords" content="js">
+  <meta name="description" content="CSS basic box model当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 CSS 基础框盒模型（CSS basic box model），将所有元素表示为一个个矩形的盒子（box）。 每个盒子由四个部分（区域）组成，内容边界 Content edge、内边距边界 Padding Edge、边框边界 Border Edge、外边框边界 Margin Edg">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS 中的 this 和 arguments">
-<meta property="og:url" content="http://yoursite.com/2019/04/07/JS中的this和arguments/index.html">
+<meta property="og:title" content="盒模型">
+<meta property="og:url" content="http://yoursite.com/2019/04/10/盒模型/index.html">
 <meta property="og:site_name" content="Kari&#39;s Notes">
-<meta property="og:description" content="this在 JavaScript 中， 函数有两种调用方式：123456789function sum(x, y) &amp;#123;    return x + y&amp;#125;// 第一种方式sum(1, 2)    // 3// 第二种方式sum.call(undefined, 1, 2)    // 3 第一种方式是常用的方法调用函数，第二种是使用 call() 方法调用函数，在使用后者调用函数时">
+<meta property="og:description" content="CSS basic box model当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 CSS 基础框盒模型（CSS basic box model），将所有元素表示为一个个矩形的盒子（box）。 每个盒子由四个部分（区域）组成，内容边界 Content edge、内边距边界 Padding Edge、边框边界 Border Edge、外边框边界 Margin Edg">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-10T12:59:08.190Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/4/16/16a2634ee81fe4d3?w=548&h=384&f=png&s=4477">
+<meta property="og:updated_time" content="2019-04-16T13:43:03.567Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS 中的 this 和 arguments">
-<meta name="twitter:description" content="this在 JavaScript 中， 函数有两种调用方式：123456789function sum(x, y) &amp;#123;    return x + y&amp;#125;// 第一种方式sum(1, 2)    // 3// 第二种方式sum.call(undefined, 1, 2)    // 3 第一种方式是常用的方法调用函数，第二种是使用 call() 方法调用函数，在使用后者调用函数时">
+<meta name="twitter:title" content="盒模型">
+<meta name="twitter:description" content="CSS basic box model当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 CSS 基础框盒模型（CSS basic box model），将所有元素表示为一个个矩形的盒子（box）。 每个盒子由四个部分（区域）组成，内容边界 Content edge、内边距边界 Padding Edge、边框边界 Border Edge、外边框边界 Margin Edg">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/4/16/16a2634ee81fe4d3?w=548&h=384&f=png&s=4477">
   
     <link rel="alternative" href="/atom.xml" title="Kari&#39;s Notes" type="application/atom+xml">
   
@@ -149,33 +151,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JS中的this和arguments" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-盒模型" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JS 中的 this 和 arguments
+      盒模型
     </h1>
   
 
         
-        <a href="/2019/04/07/JS中的this和arguments/" class="archive-article-date">
-  	<time datetime="2019-04-07T15:40:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-07</time>
+        <a href="/2019/04/10/盒模型/" class="archive-article-date">
+  	<time datetime="2019-04-10T14:31:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>在 JavaScript 中， 函数有两种调用方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function sum(x, y) &#123;</span><br><span class="line">    return x + y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 第一种方式</span><br><span class="line">sum(1, 2)    // 3</span><br><span class="line"></span><br><span class="line">// 第二种方式</span><br><span class="line">sum.call(undefined, 1, 2)    // 3</span><br></pre></td></tr></table></figure></p>
-<p>第一种方式是常用的方法调用函数，第二种是使用 <code>call()</code> 方法调用函数，在使用后者调用函数时，第一个参数便是 <code>this</code> 值。</p>
+        <h2 id="CSS-basic-box-model"><a href="#CSS-basic-box-model" class="headerlink" title="CSS basic box model"></a>CSS basic box model</h2><p>当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 <strong>CSS 基础框盒模型</strong>（CSS basic box model），将所有元素表示为一个个矩形的盒子（box）。</p>
+<p>每个盒子由四个部分（区域）组成，内容边界 Content edge、内边距边界 Padding Edge、边框边界 Border Edge、外边框边界 Margin Edge。  </p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/4/16/16a2634ee81fe4d3?w=548&amp;h=384&amp;f=png&amp;s=4477" alt></p>
 <a id="more"></a>
-<h3 id="全局环境"><a href="#全局环境" class="headerlink" title="全局环境"></a>全局环境</h3><p>无论是否在严格模式下，在全局执行环境中（在任何函数体外部）<code>this</code>  都指向全局对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 在浏览器中, window 对象同时也是全局对象</span><br><span class="line">console.log(this === window)    // true</span><br><span class="line"></span><br><span class="line">a = 37</span><br><span class="line">console.log(window.a)    // 37</span><br><span class="line"></span><br><span class="line">this.b = &quot;你好&quot;</span><br><span class="line">console.log(window.b)    // &quot;你好&quot;</span><br><span class="line">console.log(b)           // &quot;你好&quot;</span><br></pre></td></tr></table></figure></p>
-<h3 id="函数（运行内）环境"><a href="#函数（运行内）环境" class="headerlink" title="函数（运行内）环境"></a>函数（运行内）环境</h3><p>因为下面的代码不在严格模式下，且 <code>this</code> 的值不是由该调用设置的，所以  <code>this</code> 的值默认指向全局对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function f1()&#123;</span><br><span class="line">  return this</span><br><span class="line">&#125;</span><br><span class="line">//在浏览器中：</span><br><span class="line">f1() === window     //在浏览器中，全局对象是window</span><br></pre></td></tr></table></figure></p>
-<p>然而，在严格模式下，<code>this</code> 将保持他进入执行环境时的值，所以下面的 <code>this</code> 将会默认为 <code>undefined</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function f2()&#123;</span><br><span class="line">  &quot;use strict&quot;    // 这里是严格模式</span><br><span class="line">  return this</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f2() === undefined    // true</span><br></pre></td></tr></table></figure></p>
-<h2 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h2><p>还是最上面的例子。<br>如果函数以 <code>()</code> 的方式调用，那么 <code>arguments</code> 就是由所有参数组成的伪数组。<br>如果函数以 <code>call()</code> 的方式调用，那么 <code>arguments</code> 指的就是第二个及之后的参数组成的伪数组。<br>需要注意的是，在非严格模式下，<code>arguments</code> 可以被修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 非严格模式</span><br><span class="line">function sum(x, y) &#123;</span><br><span class="line">    arguments[0] = 100</span><br><span class="line">    arguments[1] = 100</span><br><span class="line">    return x + y</span><br><span class="line">&#125;</span><br><span class="line">sum(1, 2)  // 200</span><br><span class="line">sum.call(undefined, 1, 2)  // 200</span><br><span class="line"></span><br><span class="line">// 严格模式</span><br><span class="line">function sum(x, y) &#123;</span><br><span class="line">    &apos;use strict&apos;</span><br><span class="line">    arguments[0] = 100</span><br><span class="line">    arguments[1] = 100</span><br><span class="line">    return x + y</span><br><span class="line">&#125;</span><br><span class="line">sum(1, 2)  // 3</span><br><span class="line">sum.call(undefined, 1, 2)  // 3</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>width</code> 和 <code>height</code> 设置内容框（content box）的宽度和高度。  </li>
+<li><code>padding</code> 表示元素的内边距。  </li>
+<li><code>border</code> 表示元素的边框。  </li>
+<li><p><code>margin</code> 表示元素的外边距。</p>
+<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p><code>box-sizing</code> 属性定义了应该如何计算一个元素的总宽度和总高度。</p>
+</li>
+<li><p><code>content-box</code>：默认值，标准盒模型。<code>width</code> 和 <code>height</code> 只包括内容的宽高。<br>width/height = 内容的宽度/高度</p>
+</li>
+<li><code>border-box</code>：IE 盒模型。<code>width</code> 和 <code>height</code> 包括内容、内边距和边框。<br>width/height = border + padding + 内容的宽度/高度</li>
+<li><code>padding-box</code><strong>（已弃用）</strong>：<code>width</code> 和 <code>height</code> 属性包括内容和内边距，但是不包括边框和外边距。只有Firefox实现了这个值，它在Firefox 50中被删除。<h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><code>overflow</code> 定义当一个元素的内容太大而无法适应 <a href="http://xxxxx" target="_blank" rel="noopener">块级格式化上下文</a> 时候该做什么。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/* 默认值。内容不会被修剪，会呈现在元素框之外 */</span><br><span class="line">overflow: visible;</span><br><span class="line"></span><br><span class="line">/* 内容会被修剪，并且其余内容不可见 */</span><br><span class="line">overflow: hidden;</span><br><span class="line"></span><br><span class="line">/* 内容会被修剪，浏览器会显示滚动条以便查看其余内容 */</span><br><span class="line">overflow: scroll;</span><br><span class="line"></span><br><span class="line">/* 由浏览器定夺，如果内容被修剪，就会显示滚动条 */</span><br><span class="line">overflow: auto;</span><br><span class="line"></span><br><span class="line">/* 规定从父元素继承overflow属性的值 */</span><br><span class="line">overflow: inherit;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>为使 <code>overflow</code> 有效果，块级容器必须有一个指定的高度（<code>height</code> 或者 <code>max-height</code>）或者将 <code>white-space</code> 设置为 <code>nowrap</code>。</p>
 
       
 
@@ -189,7 +202,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -208,18 +221,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/09/实现一个jQuery的API/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/14/层叠顺序和层叠上下文/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          实现一个简单的 jQuery 的 API
+          层叠顺序和层叠上下文
         
       </div>
     </a>
   
   
-    <a href="/2019/04/06/关于DOM的理解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于 DOM 的理解</div>
+    <a href="/2019/04/09/实现一个jQuery的API/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">实现一个简单的 jQuery 的 API</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -246,7 +259,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#this"><span class="toc-number">1.</span> <span class="toc-text">this</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#全局环境"><span class="toc-number">1.1.</span> <span class="toc-text">全局环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数（运行内）环境"><span class="toc-number">1.2.</span> <span class="toc-text">函数（运行内）环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arguments"><span class="toc-number">2.</span> <span class="toc-text">arguments</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-basic-box-model"><span class="toc-number">1.</span> <span class="toc-text">CSS basic box model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#box-sizing"><span class="toc-number">2.</span> <span class="toc-text">box-sizing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#overflow"><span class="toc-number">3.</span> <span class="toc-text">overflow</span></a></li></ol>
                     </div>
                 </span>
             </div>
